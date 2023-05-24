@@ -58,9 +58,47 @@ void main(void)
         yeux_start_mesure();
         distance_mm = yeux_convertir_impulsion_vers_distance_mm(yeux_get_largeur_impulsion_us());
             
-        
-    
-}
+        if (distance_mm < 100)
+        {
+            for (int compteur_10kHz = 0; compteur_10kHz < 2500; ++compteur_10kHz)
+                {
+                    IO_BUZZER_SetHigh();
+                    DELAY_microseconds(100);
+                    IO_BUZZER_SetLow();
+                    DELAY_microseconds(100);
+                }
+        }
+        else if (distance_mm < 150)
+        {
+            for (int compteur_7kHz = 0; compteur_7kHz < 1750; ++compteur_7kHz)
+                {
+                    IO_BUZZER_SetHigh();
+                    DELAY_microseconds(150);
+                    IO_BUZZER_SetLow();
+                    DELAY_microseconds(150);
+                }
+        }
+        else if (distance_mm < 200)
+        {
+            for (int compteur_2kHz = 0; compteur_2kHz < 1000; ++compteur_2kHz)
+                {
+                    IO_BUZZER_SetHigh();
+                    DELAY_microseconds(500);
+                    IO_BUZZER_SetLow();
+                    DELAY_microseconds(500);
+                }
+        }
+        else
+        {
+            for (int compteur_50Hz = 0; compteur_50Hz < 25; ++compteur_50Hz)
+                {
+                    IO_BUZZER_SetHigh();
+                    DELAY_microseconds(2000);
+                    IO_BUZZER_SetLow();
+                    DELAY_microseconds(2000);
+                }
+        }
+    }
     
         /* 
          * Ajouter votre code à partir de ce point
