@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>chaud_devant</name>
+            <name>lecon_4</name>
             <creation-uuid>3d2fdd3e-718c-4b01-b252-a4157b77f25e</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
