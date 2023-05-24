@@ -90,7 +90,7 @@ void main(void)
         }
         else
         {
-            for (int compteur_50Hz = 0; compteur_50Hz < 13; ++compteur_50Hz)
+            for (int compteur_50Hz = 0; compteur_50Hz < 25; ++compteur_50Hz)
                 {
                     IO_BUZZER_SetHigh();
                     DELAY_microseconds(2000);
